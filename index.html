@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+        <img src="https://media.giphy.com/media/l4ucfSM1j36lX2W4gf/giphy.gif"; id="dog">
+<style type="text/css">
+        body{margin: auto; background: url(back.jpg)}
+        #dog{position: absolute; left:-300px; top:-300px; width: 150px; height: auto;}
+</style>
+        <script type="text/javascript">
+let x=0; let y=0;
+window.onclick = function(e){
+        makeDog(e.clientX, e.clientY);
+}
+function makeDog(xplot,yplot){
+        let d = document.getElementById("dog");
+        let a = d.cloneNode(true);
+        console.log(window);
+        a.onclick = function(){this.remove();}
+        x = xplot; y = yplot;
+        a.style.left = (x-125) + "px";
+        a.style.top = (y-145) + "px";
+        
+        document.body.appendChild(a);
+}                
+        </script>
+</body>
+</html>
+
